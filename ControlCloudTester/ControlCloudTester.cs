@@ -84,9 +84,12 @@ namespace ControlCloudTester {
                 }
             } else {
                 conToCloudButton.Text = "Połącz";
+                cloudSocket.Close();
                 isConnectedToCloud = false;
                 networkStream = null;
                 cloudSocket = null;
+                sendThread = null;
+                receiveThread = null;
             }
         }
 
